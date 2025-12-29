@@ -1,0 +1,1345 @@
+<!doctype html>
+<html lang="es-CO">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <title>Monet Label | Relojería de Colección</title>
+        <meta
+            name="description"
+            content="De fanáticos para fanáticos. Relojes de lujo nuevos, 100% originales y full set. Curaduría experta en Colombia."
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <style>
+            :root {
+                /* --- PALETA "PHANTOM LUXURY" --- */
+                --bg: #ffffff;
+                --gray-bg: #f9f9f9;
+                --border: #e0e0e0;
+                --text: #050505;
+                --text-light: #666666;
+                --primary: #111111;
+                --wa-color: #25d366;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    Helvetica, Arial, sans-serif;
+                -webkit-tap-highlight-color: transparent;
+            }
+            body {
+                background-color: var(--bg);
+                color: var(--text);
+                line-height: 1.6;
+                -webkit-font-smoothing: antialiased;
+                overflow-x: hidden;
+            }
+            .container {
+                width: 100%;
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 0 40px;
+            }
+
+            /* --- BOTONES --- */
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 14px 28px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                border: none;
+                white-space: nowrap;
+            }
+            .btn-primary {
+                background: var(--primary);
+                color: white;
+                border: 1px solid var(--primary);
+            }
+            .btn-primary:hover {
+                background: white;
+                color: var(--primary);
+            }
+
+            /* Botón borde blanco (Outline) */
+            .btn-outline-light {
+                background: transparent;
+                color: white;
+                border: 1px solid rgba(255, 255, 255, 0.4);
+            }
+            .btn-outline-light:hover {
+                background: white;
+                color: black;
+                border-color: white;
+            }
+
+            .btn-whatsapp {
+                background-color: var(--wa-color);
+                color: white;
+                border-radius: 4px;
+            }
+            .btn-whatsapp:hover {
+                background-color: #1ebc57;
+            }
+
+            /* --- NAV --- */
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 40px;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--border);
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+            .logo {
+                font-size: 1.2rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: var(--text);
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                letter-spacing: -0.5px;
+            }
+            .nav-links {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+            .desktop-link {
+                display: block;
+                text-decoration: none;
+                color: var(--text-light);
+                font-size: 0.75rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: color 0.3s;
+            }
+            .desktop-link:hover {
+                color: var(--text);
+            }
+
+            /* --- HERO --- */
+            header {
+                background: linear-gradient(
+                    -45deg,
+                    #000000,
+                    #1c1c1c,
+                    #2b2b2b,
+                    #000000
+                );
+                background-size: 400% 400%;
+                animation: phantomGradient 8s ease infinite;
+                position: relative;
+                min-height: 650px;
+                display: flex;
+                align-items: center;
+                color: white;
+                overflow: hidden;
+            }
+
+            @keyframes phantomGradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+
+            /* Texturas Fondo */
+            header::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+                opacity: 0.3;
+                pointer-events: none;
+                z-index: 1;
+            }
+            header::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image:
+                    linear-gradient(
+                        rgba(255, 255, 255, 0.03) 1px,
+                        transparent 1px
+                    ),
+                    linear-gradient(
+                        90deg,
+                        rgba(255, 255, 255, 0.03) 1px,
+                        transparent 1px
+                    );
+                background-size: 60px 60px;
+                pointer-events: none;
+                z-index: 1;
+            }
+
+            /* SVG mecánico (Giro Suave) */
+            .mechanical-rings {
+                position: absolute;
+                right: -12%;
+                top: 75%;
+                transform: translateY(-50%);
+                width: 500px;
+                height: 400px;
+                pointer-events: none;
+                z-index: 2;
+                opacity: 0.35;
+            }
+            .mechanical-rings img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                animation: rotateRight 60s linear infinite;
+            }
+            @keyframes rotateRight {
+                from {
+                    transform: translate(-50%, -50%) rotate(0deg);
+                }
+                to {
+                    transform: translate(-50%, -50%) rotate(360deg);
+                }
+            }
+            /* Contenido Hero */
+            .hero-content {
+                position: relative;
+                z-index: 3;
+                width: 100%;
+                max-width: 1200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
+            .hero-pill {
+                display: inline-block;
+                width: fit-content;
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                color: #ffffff;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 8px 16px;
+                backdrop-filter: blur(5px);
+                font-weight: 700;
+                border-radius: 2px;
+                margin-bottom: 24px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                letter-spacing: 1px;
+            }
+            header h1 {
+                font-size: clamp(3rem, 5.5vw, 6rem);
+                font-weight: 800;
+                letter-spacing: -2px;
+                margin-bottom: 24px;
+                line-height: 1;
+                color: white;
+                max-width: 850px;
+            }
+            header p {
+                font-size: 1.35rem;
+                color: #cccccc;
+                max-width: 750px;
+                margin-bottom: 48px;
+                line-height: 1.5;
+                font-weight: 300;
+            }
+            header p b {
+                font-weight: 700;
+                color: white;
+            }
+            .hero-actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+
+            /* Ticker */
+            .ticker-wrap {
+                display: none;
+            }
+            .ticker {
+                display: flex;
+                white-space: nowrap;
+                animation: ticker 40s linear infinite;
+            }
+            .ticker-item {
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.75rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                padding: 0 50px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .ticker-item i {
+                font-size: 0.4rem;
+                color: #fff;
+                opacity: 0.5;
+            }
+            @keyframes ticker {
+                0% {
+                    transform: translate3d(0, 0, 0);
+                }
+                100% {
+                    transform: translate3d(-50%, 0, 0);
+                }
+            }
+
+            /* --- SECCIONES COMUNES --- */
+            .section-header {
+                padding: 80px 0 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                border-bottom: 1px solid var(--text);
+                margin-bottom: 40px;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                font-weight: 800;
+            }
+            .section-header p {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: var(--text-light);
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .inventory {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 1px;
+                background: var(--border);
+                border: 1px solid var(--border);
+                margin-bottom: 80px;
+            }
+            .watch-card {
+                background: white;
+                padding: 40px;
+                text-decoration: none;
+                color: inherit;
+                transition: all 0.2s ease;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+            .watch-card:hover {
+                background: #fcfcfc;
+                z-index: 2;
+                position: relative;
+            }
+            .badge-overlay {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 0.65rem;
+                text-transform: uppercase;
+                background: black;
+                color: white;
+                padding: 6px 10px;
+                font-weight: 700;
+                border-radius: 0px;
+                z-index: 5;
+                letter-spacing: 1px;
+            }
+            .watch-img {
+                width: 100%;
+                height: 300px;
+                margin-bottom: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0.95;
+                transition: opacity 0.3s;
+            }
+            .watch-card:hover .watch-img {
+                opacity: 1;
+                transform: scale(1.02);
+                transition: all 0.4s;
+            }
+            .watch-img img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                mix-blend-mode: multiply;
+            }
+            .watch-data-preview {
+                display: flex;
+                gap: 15px;
+                margin-bottom: 15px;
+                color: var(--text-light);
+                font-size: 0.75rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .watch-info {
+                margin-top: auto;
+            }
+            .watch-title small {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                color: #888;
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+            .watch-title h3 {
+                font-size: 1.4rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+                line-height: 1.2;
+                letter-spacing: -0.5px;
+            }
+            .card-cta {
+                padding-top: 20px;
+                border-top: 1px solid var(--border);
+                font-size: 0.75rem;
+                font-weight: 800;
+                text-transform: uppercase;
+                color: black;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s;
+                letter-spacing: 1px;
+            }
+            .watch-card:hover .card-cta {
+                gap: 15px;
+            }
+            .values-section {
+                background: var(--gray-bg);
+                border-top: 1px solid var(--border);
+                border-bottom: 1px solid var(--border);
+            }
+            .grid-3 {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0;
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+            .value-card {
+                padding: 80px 40px;
+                border-right: 1px solid var(--border);
+                text-align: center;
+                transition: background 0.3s;
+            }
+            .value-card:hover {
+                background: #fff;
+            }
+            .value-card:last-child {
+                border-right: none;
+            }
+            .value-icon {
+                font-size: 2rem;
+                margin-bottom: 24px;
+                color: black;
+            }
+            .value-card h3 {
+                font-size: 1rem;
+                margin-bottom: 16px;
+                text-transform: uppercase;
+                font-weight: 800;
+                letter-spacing: 1px;
+            }
+            .value-card p {
+                color: var(--text-light);
+                font-size: 0.95rem;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+            .faq-section {
+                padding: 100px 0;
+                background: #fff;
+            }
+            .faq-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 80px;
+                margin-top: 50px;
+            }
+            details {
+                border-bottom: 1px solid var(--border);
+                padding: 24px 0;
+                transition: all 0.3s;
+            }
+            summary {
+                font-weight: 700;
+                cursor: pointer;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.1rem;
+                letter-spacing: -0.5px;
+            }
+            summary:hover {
+                color: #555;
+            }
+            summary::-webkit-details-marker {
+                display: none;
+            }
+            summary::after {
+                content: "+";
+                font-weight: 300;
+                font-size: 1.5rem;
+                color: #999;
+            }
+            details[open] summary::after {
+                content: "-";
+                color: black;
+            }
+            details p {
+                margin-top: 16px;
+                color: var(--text-light);
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            footer {
+                padding: 80px 0;
+                background: #111;
+                font-size: 0.9rem;
+                color: #888;
+            }
+            .footer-grid {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr;
+                gap: 40px;
+                margin-bottom: 64px;
+            }
+            .footer-col h4 {
+                color: white;
+                text-transform: uppercase;
+                margin-bottom: 24px;
+                font-size: 0.8rem;
+                font-weight: 900;
+                letter-spacing: 1px;
+            }
+            .footer-col ul {
+                list-style: none;
+            }
+            .footer-col ul li {
+                margin-bottom: 14px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: 500;
+            }
+            .footer-col ul li a {
+                color: #888;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+            .footer-col ul li a:hover {
+                color: white;
+            }
+            .footer-bottom {
+                padding-top: 32px;
+                border-top: 1px solid #333;
+                text-align: center;
+                opacity: 0.6;
+            }
+
+            @media (max-width: 900px) {
+                .container {
+                    padding: 0 24px;
+                }
+                nav {
+                    padding: 16px 24px;
+                }
+                header {
+                    min-height: 550px;
+                    justify-content: center;
+                }
+                .mechanical-rings {
+                    right: 50%;
+                    top: 12%;
+                    transform: translate(50%, 0);
+                    width: 360px;
+                    height: 360px;
+                    opacity: 0.25;
+                }
+                header h1 {
+                    font-size: 2.8rem;
+                }
+                .hero-content {
+                    max-width: 100%;
+                    text-align: center;
+                    align-items: center;
+                }
+                header p {
+                    margin: 0 auto 40px auto;
+                }
+                .hero-actions {
+                    flex-direction: column;
+                    width: 100%;
+                }
+                .hero-actions .btn {
+                    width: 100%;
+                }
+                .grid-3 {
+                    grid-template-columns: 1fr;
+                }
+                .value-card {
+                    border-right: none;
+                    border-bottom: 1px solid var(--border);
+                    padding: 50px 20px;
+                }
+                .faq-grid,
+                .footer-grid {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                }
+                .inventory {
+                    grid-template-columns: 1fr;
+                    gap: 1px;
+                    background: var(--border);
+                    border: none;
+                }
+                .desktop-link {
+                    display: none;
+                }
+            }
+
+            .modal-backdrop {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(10px);
+                z-index: 2000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s;
+            }
+            .modal-backdrop.active {
+                opacity: 1;
+                pointer-events: all;
+            }
+            .modal-content {
+                background: white;
+                width: 95%;
+                max-width: 1000px;
+                display: grid;
+                grid-template-columns: 1.1fr 1fr;
+                position: relative;
+                border: 1px solid #eee;
+                box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.1);
+            }
+            .modal-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background: transparent;
+                border: none;
+                font-size: 2rem;
+                cursor: pointer;
+                z-index: 10;
+                color: black;
+                transition: 0.2s;
+                line-height: 1;
+            }
+            .modal-close:hover {
+                transform: rotate(90deg);
+            }
+            .modal-left {
+                background: #f9f9f9;
+                padding: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .modal-left img {
+                max-width: 100%;
+                max-height: 450px;
+                object-fit: contain;
+                mix-blend-mode: multiply;
+            }
+            .modal-right {
+                padding: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                overflow-y: auto;
+            }
+            .modal-badge {
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                color: #888;
+                margin-bottom: 12px;
+                font-weight: 800;
+                letter-spacing: 1px;
+            }
+            .modal-title {
+                font-size: 2rem;
+                line-height: 1.1;
+                margin-bottom: 16px;
+                letter-spacing: -1px;
+                font-weight: 800;
+            }
+            .modal-desc {
+                color: var(--text-light);
+                margin-bottom: 32px;
+                font-size: 1.05rem;
+                line-height: 1.6;
+            }
+            .modal-specs {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 16px;
+                margin-bottom: 32px;
+                border-top: 1px solid var(--border);
+                border-bottom: 1px solid var(--border);
+                padding: 24px 0;
+            }
+            .spec-item b {
+                display: block;
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                margin-bottom: 4px;
+                color: #999;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+            }
+            .spec-item span {
+                font-size: 1rem;
+                font-weight: 600;
+                color: black;
+            }
+            @media (max-width: 900px) {
+                .modal-content {
+                    grid-template-columns: 1fr;
+                    max-height: 90vh;
+                    overflow-y: scroll;
+                }
+                .modal-left {
+                    height: 300px;
+                    padding: 30px;
+                }
+                .modal-right {
+                    padding: 30px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="#" class="logo"
+                ><i class="fa-solid fa-clock"></i> Monet Label</a
+            >
+            <div class="nav-links">
+                <a href="#catalogo" class="desktop-link">Colección</a>
+                <a href="#faq" class="desktop-link">Ayuda</a>
+                <a
+                    href="#"
+                    class="btn btn-primary"
+                    style="
+                        padding: 10px 20px;
+                        color: white;
+                        background: black;
+                        border-color: black;
+                    "
+                    data-wa="Hola, quiero ver el catálogo disponible."
+                >
+                    <i class="fa-brands fa-whatsapp"></i> Contacto
+                </a>
+            </div>
+        </nav>
+
+        <header>
+            <div class="mechanical-rings">
+                <img src="mech.svg" alt="" aria-hidden="true" />
+            </div>
+
+            <div class="container hero-content">
+                <span class="hero-pill">Artículos nuevos</span>
+                <h1>De fanáticos de los relojes,<br />para ti.</h1>
+                <p>
+                    <b>Piezas nuevas</b> con el
+                    <b>visto bueno de coleccionistas</b>. Pasión por los
+                    <b>buenos detalles</b>. Encuentra tu próximo reloj favorito
+                    aquí
+                    <i
+                        class="fa-solid fa-arrow-down"
+                        style="
+                            margin-left: 10px;
+                            font-size: 0.9em;
+                            animation: bounce 2s infinite;
+                        "
+                    ></i>
+                </p>
+
+                <div class="hero-actions">
+                    <a
+                        href="#catalogo"
+                        class="btn btn-primary"
+                        style="
+                            background: white;
+                            color: black;
+                            border-color: white;
+                        "
+                        ><i class="fa-solid fa-book-open"></i> Ver Catálogo
+                        Privado</a
+                    >
+                    <a href="#valores" class="btn btn-outline-light"
+                        >Por qué nosotros</a
+                    >
+
+                    <a
+                        href="https://instagram.com/monet.label"
+                        target="_blank"
+                        class="btn btn-outline-light"
+                        style="border-color: transparent; gap: 6px"
+                    >
+                        <i class="fa-brands fa-instagram"></i> @monet.label
+                    </a>
+                </div>
+            </div>
+
+            <div class="ticker-wrap">
+                <div class="ticker">
+                    <div class="ticker-item">
+                        Autenticidad Garantizada
+                        <i class="fa-solid fa-circle"></i>
+                    </div>
+                    <div class="ticker-item">
+                        Envíos a toda Colombia
+                        <i class="fa-solid fa-circle"></i>
+                    </div>
+                    <div class="ticker-item">
+                        Full Set <i class="fa-solid fa-circle"></i>
+                    </div>
+                    <div class="ticker-item">
+                        Monet Label <i class="fa-solid fa-circle"></i>
+                    </div>
+                    <div class="ticker-item">
+                        Precisión <i class="fa-solid fa-circle"></i>
+                    </div>
+                    <div class="ticker-item">
+                        Autenticidad Garantizada
+                        <i class="fa-solid fa-circle"></i>
+                    </div>
+                    <div class="ticker-item">
+                        Envíos a toda Colombia
+                        <i class="fa-solid fa-circle"></i>
+                    </div>
+                    <div class="ticker-item">
+                        Full Set <i class="fa-solid fa-circle"></i>
+                    </div>
+                    <div class="ticker-item">
+                        Monet Label <i class="fa-solid fa-circle"></i>
+                    </div>
+                    <div class="ticker-item">
+                        Precisión <i class="fa-solid fa-circle"></i>
+                    </div>
+                    <div class="ticker-item">
+                        Autenticidad Garantizada
+                        <i class="fa-solid fa-circle"></i>
+                    </div>
+                    <div class="ticker-item">
+                        Envíos a toda Colombia
+                        <i class="fa-solid fa-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <style>
+            @keyframes bounce {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-5px);
+                }
+                60% {
+                    transform: translateY(-3px);
+                }
+            }
+        </style>
+
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2>Curaduría Selecta</h2>
+                    <p>Piezas destacadas de esta semana</p>
+                </div>
+                <div
+                    style="
+                        font-size: 0.9rem;
+                        font-weight: 700;
+                        color: var(--text);
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                    "
+                >
+                    <i class="fa-solid fa-circle-check"></i> STOCK DISPONIBLE
+                </div>
+            </div>
+
+            <section class="inventory" id="catalogo">
+                <div class="watch-card" onclick="openProduct('tissot')">
+                    <span class="badge-overlay">Más Buscado</span>
+                    <div class="watch-img">
+                        <img
+                            src="https://www.tissotwatches.com/media/catalog/product/t/1/t137_407_11_351_00_r_1.png"
+                            onerror="
+                                this.src =
+                                    'https://via.placeholder.com/400x400?text=Tissot+PRX'
+                            "
+                            alt="Tissot PRX"
+                        />
+                    </div>
+                    <div class="watch-data-preview">
+                        <span
+                            ><i class="fa-solid fa-ruler-horizontal"></i>
+                            40mm</span
+                        >
+                        <span><i class="fa-solid fa-gear"></i> Auto</span>
+                    </div>
+                    <div class="watch-info">
+                        <div class="watch-title">
+                            <small>Tissot</small>
+                            <h3>PRX Powermatic 80 Ice Blue</h3>
+                        </div>
+                        <div class="card-cta">
+                            Ver Detalles
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="watch-card" onclick="openProduct('seiko')">
+                    <span class="badge-overlay" style="background: #333"
+                        >Pieza de Culto</span
+                    >
+                    <div class="watch-img">
+                        <img
+                            src="https://image.gnomonwatches.com/seiko-watch/sbsa223/sbsa223_1.png"
+                            onerror="
+                                this.src =
+                                    'https://via.placeholder.com/400x400?text=Seiko+Arabic'
+                            "
+                            alt="Seiko 5"
+                        />
+                    </div>
+                    <div class="watch-data-preview">
+                        <span
+                            ><i class="fa-solid fa-ruler-horizontal"></i>
+                            40mm</span
+                        >
+                        <span><i class="fa-solid fa-gear"></i> Auto</span>
+                    </div>
+                    <div class="watch-info">
+                        <div class="watch-title">
+                            <small>Seiko</small>
+                            <h3>Seiko 5 'Arabic Dial'</h3>
+                        </div>
+                        <div class="card-cta">
+                            Ver Detalles
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="watch-card" onclick="openProduct('orient')">
+                    <span class="badge-overlay" style="background: #555"
+                        >Best Value</span
+                    >
+                    <div class="watch-img">
+                        <img
+                            src="https://orient-watch.com/images/products/category/archive/AA02005D_0.png"
+                            onerror="
+                                this.src =
+                                    'https://via.placeholder.com/400x400?text=Orient+Ray+II'
+                            "
+                            alt="Orient Ray"
+                        />
+                    </div>
+                    <div class="watch-data-preview">
+                        <span
+                            ><i class="fa-solid fa-ruler-horizontal"></i>
+                            41.5mm</span
+                        >
+                        <span><i class="fa-solid fa-water"></i> 200m</span>
+                    </div>
+                    <div class="watch-info">
+                        <div class="watch-title">
+                            <small>Orient</small>
+                            <h3>Ray II Diver 200m</h3>
+                        </div>
+                        <div class="card-cta">
+                            Ver Detalles
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="values-section" id="valores">
+            <div class="grid-3">
+                <div class="value-card">
+                    <i class="fa-solid fa-box-open value-icon"></i>
+                    <h3>Full Set Garantizado</h3>
+                    <p>
+                        Caja original, manuales y tarjetas de garantía. La
+                        experiencia de estreno completa.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <i class="fa-solid fa-certificate value-icon"></i>
+                    <h3>Autenticidad Verificada</h3>
+                    <p>
+                        Doble verificación. Solo vendemos piezas 100%
+                        originales, nuevas y en estado cosmético impecable.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <i class="fa-solid fa-shield-halved value-icon"></i>
+                    <h3>Envío Asegurado</h3>
+                    <p>
+                        Tu inversión viaja protegida. Envíos asegurados por el
+                        valor total a toda Colombia.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="faq">
+            <div class="faq-section">
+                <h2
+                    style="
+                        text-transform: uppercase;
+                        font-size: 1.8rem;
+                        letter-spacing: -1px;
+                        margin-bottom: 32px;
+                        font-weight: 800;
+                    "
+                >
+                    Preguntas Frecuentes
+                </h2>
+                <div class="faq-grid">
+                    <div class="faq-col">
+                        <details>
+                            <summary>¿Son relojes originales?</summary>
+                            <p>
+                                Absolutamente. Garantizamos la autenticidad de
+                                cada pieza. Todos los relojes son nuevos y se
+                                entregan con su set completo (Caja y papeles).
+                            </p>
+                        </details>
+                        <details>
+                            <summary>¿Cómo es el proceso de pago?</summary>
+                            <p>
+                                Manejamos transferencia bancaria directa
+                                (Bancolombia/Nequi) para mayor seguridad y
+                                trazabilidad. No aceptamos efectivo.
+                            </p>
+                        </details>
+                    </div>
+                    <div class="faq-col">
+                        <details>
+                            <summary>¿Hacen envíos contraentrega?</summary>
+                            <p>
+                                Por seguridad del producto y del mensajero,
+                                despachamos únicamente previo pago. El envío
+                                incluye póliza de seguro por el valor total.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>¿Tienen garantía?</summary>
+                            <p>
+                                Sí. Cuentas con la garantía oficial del
+                                fabricante (1 a 2 años según la marca) y el
+                                respaldo directo de Monet Label durante el
+                                proceso.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <a
+                            href="#"
+                            class="logo"
+                            style="
+                                margin-bottom: 24px;
+                                display: inline-block;
+                                color: white;
+                            "
+                            >Monet Label</a
+                        >
+                        <p>
+                            Especialistas en la comercialización de relojería de
+                            alta gama para coleccionistas exigentes en Colombia.
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li>
+                                <i
+                                    class="fa-brands fa-whatsapp"
+                                    style="color: var(--wa-color)"
+                                ></i>
+                                +57 301 491 4532
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                ventas@monetlabel.com
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Medellín, Colombia
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Términos y Condiciones</a></li>
+                            <li><a href="#">Política de Envío</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div style="font-size: 0.8rem">
+                        © 2025 Monet Label. Todos los derechos reservados.
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="modal-backdrop" id="modalBackdrop">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeProduct()">
+                    &times;
+                </button>
+                <div class="modal-left">
+                    <img id="modalMainImg" src="" alt="" />
+                </div>
+                <div class="modal-right">
+                    <span class="modal-badge" id="modalBadge">BADGE</span>
+                    <h2 id="modalTitle" class="modal-title">
+                        Titulo del Reloj
+                    </h2>
+                    <p id="modalDesc" class="modal-desc">
+                        Descripción del reloj aquí.
+                    </p>
+
+                    <div class="modal-specs">
+                        <div class="spec-item">
+                            <b
+                                ><i class="fa-solid fa-ruler-horizontal"></i>
+                                Caja</b
+                            ><span id="specCase">40mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <b><i class="fa-solid fa-gears"></i> Calibre</b
+                            ><span id="specMov">Auto</span>
+                        </div>
+                        <div class="spec-item">
+                            <b><i class="fa-regular fa-gem"></i> Cristal</b
+                            ><span id="specGlass">Zafiro</span>
+                        </div>
+                    </div>
+
+                    <a
+                        id="modalCta"
+                        href="#"
+                        class="btn btn-whatsapp"
+                        style="
+                            width: 100%;
+                            justify-content: center;
+                            padding: 16px;
+                            font-size: 0.9rem;
+                            border: none;
+                        "
+                    >
+                        <i
+                            class="fa-brands fa-whatsapp"
+                            style="font-size: 1.1rem; margin-right: 8px"
+                        ></i>
+                        Comprar por WhatsApp
+                    </a>
+                    <p
+                        style="
+                            text-align: center;
+                            margin-top: 15px;
+                            font-size: 0.75rem;
+                            color: var(--text-light);
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 6px;
+                        "
+                    >
+                        <i class="fa-solid fa-shield-halved"></i> Compra
+                        protegida y envío asegurado.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                // --- LOGICA FAQ ---
+                document.addEventListener("DOMContentLoaded", () => {
+                    if (window.innerWidth > 900) {
+                        document
+                            .querySelectorAll("details")
+                            .forEach((el) => el.setAttribute("open", ""));
+                    }
+                });
+
+                const products = {
+                    tissot: {
+                        title: "Tissot PRX Powermatic 80",
+                        desc: "El reloj que definió una era, reinventado. Con su brazalete integrado y dial 'Ice Blue' con textura waffle, es la combinación perfecta de deportividad y elegancia. Maquinaria suiza automática con 80 horas de reserva.",
+                        badge: "Más Buscado",
+                        specs: {
+                            case: "40mm",
+                            mov: "Automático 80h",
+                            glass: "Zafiro",
+                        },
+                        wa: "Hola, quiero comprar el Tissot PRX Ice Blue.",
+                        img: "https://www.tissotwatches.com/media/catalog/product/t/1/t137_407_11_351_00_r_1.png",
+                    },
+                    seiko: {
+                        title: "Seiko 5 'Arabic Dial'",
+                        desc: "Una pieza de culto instantánea. Fabricado originalmente para el mercado de Oriente Medio, destaca por sus números indo-arábigos. Una rareza exótica en 40mm que todo coleccionista busca.",
+                        badge: "Pieza de Culto",
+                        specs: {
+                            case: "40mm",
+                            mov: "Automático 4R36",
+                            glass: "Hardlex",
+                        },
+                        wa: "Hola, me interesa el Seiko 5 Arabic Dial.",
+                        img: "https://image.gnomonwatches.com/seiko-watch/sbsa223/sbsa223_1.png",
+                    },
+                    orient: {
+                        title: "Orient Ray II Diver",
+                        desc: "Posiblemente el mejor 'Diver' en su rango de precio. Certificación de 200 metros, corona roscada y un movimiento in-house robusto. El reloj herramienta definitivo para el día a día.",
+                        badge: "Best Value",
+                        specs: {
+                            case: "41.5mm",
+                            mov: "Automático F6922",
+                            glass: "Mineral",
+                        },
+                        wa: "Hola, quiero información del Orient Ray II.",
+                        img: "https://orient-watch.com/images/products/category/archive/AA02005D_0.png",
+                    },
+                };
+
+                const NUMBER = "573014914532";
+                const modal = document.getElementById("modalBackdrop");
+
+                window.openProduct = function (id) {
+                    const p = products[id];
+                    if (!p) return;
+                    document.getElementById("modalTitle").textContent = p.title;
+                    document.getElementById("modalDesc").textContent = p.desc;
+                    document.getElementById("modalBadge").innerHTML =
+                        `<i class="fa-solid fa-tag"></i> ${p.badge}`;
+                    document.getElementById("specCase").textContent =
+                        p.specs.case;
+                    document.getElementById("specMov").textContent =
+                        p.specs.mov;
+                    document.getElementById("specGlass").textContent =
+                        p.specs.glass;
+                    document.getElementById("modalMainImg").src = p.img;
+                    document.getElementById("modalCta").href =
+                        `https://wa.me/${NUMBER}?text=${encodeURIComponent(p.wa)}`;
+                    modal.classList.add("active");
+                    document.body.style.overflow = "hidden";
+                };
+
+                window.closeProduct = function () {
+                    modal.classList.remove("active");
+                    document.body.style.overflow = "auto";
+                };
+
+                modal.addEventListener("click", (e) => {
+                    if (e.target === modal) closeProduct();
+                });
+
+                document.addEventListener("keydown", (e) => {
+                    if (
+                        e.key === "Escape" &&
+                        modal.classList.contains("active")
+                    )
+                        closeProduct();
+                });
+
+                document.querySelectorAll("[data-wa]").forEach((el) => {
+                    if (!el.id.includes("modal")) {
+                        const text = encodeURIComponent(
+                            el.getAttribute("data-wa"),
+                        );
+                        el.href = `https://wa.me/${NUMBER}?text=${text}`;
+                    }
+                });
+            })();
+        </script>
+    </body>
+</html>
