@@ -537,6 +537,95 @@
                 max-width: 350px;
                 margin: 0 auto;
             }
+            .buy-today {
+                padding: 90px 0;
+            }
+            .buy-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                align-items: start;
+            }
+            .buy-card {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                padding: 40px;
+            }
+            .buy-card h3 {
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                letter-spacing: -0.5px;
+                margin-bottom: 18px;
+                font-weight: 800;
+            }
+            .buy-list,
+            .steps {
+                list-style: none;
+                display: grid;
+                gap: 16px;
+            }
+            .buy-list li {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 0.95rem;
+                font-weight: 600;
+                color: var(--text);
+            }
+            .step {
+                display: flex;
+                gap: 14px;
+                align-items: flex-start;
+            }
+            .step-number {
+                min-width: 36px;
+                height: 36px;
+                border-radius: 999px;
+                background: var(--primary);
+                color: white;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.75rem;
+                font-weight: 800;
+                letter-spacing: 1px;
+            }
+            .step h4 {
+                font-size: 0.95rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 6px;
+                font-weight: 800;
+            }
+            .step p {
+                color: var(--text-light);
+                font-size: 0.9rem;
+            }
+            .cta-final {
+                padding: 90px 0;
+                background: var(--surface-strong);
+                border-top: 1px solid var(--border);
+                border-bottom: 1px solid var(--border);
+                text-align: center;
+            }
+            .cta-final h2 {
+                font-size: 2rem;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                margin-bottom: 16px;
+                font-weight: 900;
+            }
+            .cta-final p {
+                color: var(--text-light);
+                font-weight: 600;
+                margin-bottom: 28px;
+            }
+            .cta-final .btn {
+                padding: 18px 36px;
+                font-size: 0.85rem;
+                letter-spacing: 1.5px;
+                border-radius: 4px;
+            }
             .faq-section {
                 padding: 100px 0;
                 background: var(--surface);
@@ -684,6 +773,16 @@
                     border-right: none;
                     border-bottom: 1px solid var(--border);
                     padding: 50px 20px;
+                }
+                .buy-grid {
+                    grid-template-columns: 1fr;
+                    gap: 32px;
+                }
+                .buy-card {
+                    padding: 28px;
+                }
+                .cta-final {
+                    padding: 70px 0;
                 }
                 .faq-grid,
                 .footer-grid {
@@ -1324,6 +1423,92 @@
                         valor total a toda Colombia.
                     </p>
                 </div>
+            </div>
+        </section>
+
+        <section class="buy-today">
+            <div class="container buy-grid">
+                <div class="buy-card">
+                    <h3>Por qué comprar hoy</h3>
+                    <ul class="buy-list">
+                        <li>
+                            <svg
+                                class="icon icon-certificate"
+                                aria-hidden="true"
+                            >
+                                <use href="#icon-certificate"></use>
+                            </svg>
+                            Autenticidad verificada
+                        </li>
+                        <li>
+                            <svg class="icon icon-box" aria-hidden="true">
+                                <use href="#icon-box"></use>
+                            </svg>
+                            Full set completo
+                        </li>
+                        <li>
+                            <svg class="icon icon-shield" aria-hidden="true">
+                                <use href="#icon-shield"></use>
+                            </svg>
+                            Envío asegurado
+                        </li>
+                        <li>
+                            <svg
+                                class="icon icon-circle-check"
+                                aria-hidden="true"
+                            >
+                                <use href="#icon-circle-check"></use>
+                            </svg>
+                            Garantía oficial incluida
+                        </li>
+                    </ul>
+                </div>
+                <div class="buy-card">
+                    <h3>Proceso en 3 pasos</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <span class="step-number">01</span>
+                            <div>
+                                <h4>Elige</h4>
+                                <p>
+                                    Te compartimos opciones reales y
+                                    disponibles.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">02</span>
+                            <div>
+                                <h4>Valida</h4>
+                                <p>Confirmamos autenticidad y full set.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">03</span>
+                            <div>
+                                <h4>Recibe</h4>
+                                <p>
+                                    Entrega asegurada y seguimiento en tiempo
+                                    real.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-final">
+            <div class="container">
+                <h2>¿Listo para ver disponibilidad?</h2>
+                <p>Resolvemos tu compra en minutos por WhatsApp.</p>
+                <a
+                    href="#"
+                    class="btn btn-primary"
+                    data-wa="Hola, quiero ver disponibilidad ahora."
+                >
+                    Quiero ver disponibilidad ahora
+                </a>
             </div>
         </section>
 
