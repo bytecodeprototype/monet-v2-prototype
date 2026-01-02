@@ -6,6 +6,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
+        <meta name="format-detection" content="telephone=no" />
         <title>Monet Label | Relojería de Colección</title>
         <meta
             name="description"
@@ -47,6 +48,18 @@
                 stroke-linecap: round;
                 stroke-linejoin: round;
                 fill: none;
+            }
+            a[x-apple-data-detectors],
+            a[x-apple-data-detectors]:link,
+            a[x-apple-data-detectors]:visited,
+            a[x-apple-data-detectors]:hover,
+            a[x-apple-data-detectors]:active {
+                color: inherit !important;
+                text-decoration: none !important;
+                font-size: inherit !important;
+                font-family: inherit !important;
+                font-weight: inherit !important;
+                line-height: inherit !important;
             }
             .icon-fill {
                 fill: currentColor;
@@ -224,33 +237,6 @@
                 pointer-events: none;
                 z-index: 1;
             }
-            header::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image:
-                    linear-gradient(
-                        rgba(255, 255, 255, 0.03) 1px,
-                        transparent 1px
-                    ),
-                    linear-gradient(
-                        90deg,
-                        rgba(255, 255, 255, 0.03) 1px,
-                        transparent 1px
-                    );
-                background-repeat: repeat, repeat;
-                background-size:
-                    60px 60px,
-                    60px 60px;
-                background-position:
-                    0 0,
-                    0 0;
-                pointer-events: none;
-                z-index: 1;
-            }
 
             /* SVG mecánico (Giro Suave) */
             .mechanical-rings {
@@ -407,6 +393,7 @@
                 display: flex;
                 flex-direction: column;
                 overflow: hidden;
+                position: relative;
             }
             .watch-card:hover {
                 background: var(--surface-strong);
@@ -679,6 +666,11 @@
                 font-size: 0.9rem;
                 color: #888;
             }
+            footer a,
+            footer a:visited {
+                color: inherit;
+                text-decoration: none;
+            }
             .footer-grid {
                 display: grid;
                 grid-template-columns: 2fr 1fr 1fr;
@@ -873,6 +865,7 @@
                 margin-bottom: 12px;
                 font-weight: 800;
                 letter-spacing: 1px;
+                display: none;
             }
             .modal-title {
                 font-size: 2rem;
@@ -1254,7 +1247,9 @@
 
             <section class="inventory" id="catalogo">
                 <div class="watch-card" onclick="openProduct('tissot')">
-                    <span class="badge-overlay">Más Buscado</span>
+                    <span class="badge-overlay" style="background: #8b4513"
+                        >Más Buscado</span
+                    >
                     <div class="watch-img">
                         <img
                             src="images/prx.png"
@@ -1297,7 +1292,7 @@
                 </div>
 
                 <div class="watch-card" onclick="openProduct('seiko')">
-                    <span class="badge-overlay" style="background: #333"
+                    <span class="badge-overlay" style="background: #1e3a5f"
                         >Pieza de Culto</span
                     >
                     <div class="watch-img">
@@ -1342,7 +1337,7 @@
                 </div>
 
                 <div class="watch-card" onclick="openProduct('orient')">
-                    <span class="badge-overlay" style="background: #555"
+                    <span class="badge-overlay" style="background: #2d5016"
                         >Best Value</span
                     >
                     <div class="watch-img">
@@ -1507,7 +1502,7 @@
                     class="btn btn-primary"
                     data-wa="Hola, quiero ver disponibilidad ahora."
                 >
-                    Quiero ver disponibilidad ahora
+                    Ver disponibilidad
                 </a>
             </div>
         </section>
