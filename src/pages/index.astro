@@ -74,6 +74,10 @@
                 fill: currentColor;
                 stroke: none;
             }
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: calc(var(--nav-height) + 20px);
+            }
             body {
                 background-color: var(--bg);
                 background-image:
@@ -1359,7 +1363,7 @@
         </style>
 
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" id="catalogo">
                 <div>
                     <h2>Curaduría Selecta</h2>
                     <p>Piezas destacadas de esta semana</p>
@@ -1381,7 +1385,7 @@
                 </div>
             </div>
 
-            <section class="inventory" id="catalogo">
+            <section class="inventory">
                 <div class="watch-card" onclick="openProduct('tissot')">
                     <span class="badge-overlay" style="background: #8b4513"
                         >Más Buscado</span
@@ -1710,8 +1714,8 @@
                             Monet Label</a
                         >
                         <p>
-                            Especialistas en la comercialización de relojería de
-                            alta gama para coleccionistas exigentes en Colombia.
+                            Especialistas en la comercialización de relojería
+                            para coleccionistas exigentes en Colombia.
                         </p>
                     </div>
                     <div class="footer-col">
