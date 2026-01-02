@@ -12,7 +12,7 @@
             name="description"
             content="De fanáticos para fanáticos. Relojes de lujo nuevos, 100% originales y full set. Curaduría experta en Colombia."
         />
-        <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+        <link rel="icon" type="image/svg+xml" href="images/logo-white.svg" />
 
         <style>
             :root {
@@ -1876,13 +1876,15 @@
                                 <a
                                     href="#"
                                     onclick="openContentModal('terminos'); return false;"
-                                    >Términos y Condiciones</a>
+                                    >Términos y Condiciones</a
+                                >
                             </li>
                             <li>
                                 <a
                                     href="#"
                                     onclick="openContentModal('envios'); return false;"
-                                    >Política de Envío</a>
+                                    >Política de Envío</a
+                                >
                             </li>
                         </ul>
                     </div>
@@ -2098,18 +2100,23 @@
                 // Content Modal System
                 let legalContent = {};
 
-                fetch("/content/legal.json")
-                    .then((res) => res.json())
-                    .then((data) => {
-                        legalContent = data;
-                    })
-                    .catch((err) =>
-                        console.error("Error loading legal content:", err),
-                    );
+                // Load content immediately
+                (async function loadLegalContent() {
+                    try {
+                        const response = await fetch("/content/legal.json");
+                        if (!response.ok) throw new Error("Failed to load");
+                        legalContent = await response.json();
+                    } catch (err) {
+                        console.error("Error loading legal content:", err);
+                    }
+                })();
 
                 window.openContentModal = function (type) {
                     const content = legalContent[type];
-                    if (!content) return;
+                    if (!content) {
+                        console.warn("Content not found for:", type);
+                        return;
+                    }
 
                     const modal = document.getElementById("contentModal");
                     document.getElementById("contentModalTitle").textContent =
