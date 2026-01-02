@@ -525,68 +525,148 @@
                 margin: 0 auto;
             }
             .buy-today {
-                padding: 90px 0;
+                padding: 100px 0;
+                background: var(--bg);
+            }
+            .section-intro {
+                text-align: center;
+                margin-bottom: 60px;
+            }
+            .section-intro h2 {
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                margin-bottom: 12px;
+                font-weight: 900;
+            }
+            .section-intro p {
+                color: var(--text-light);
+                font-size: 1.1rem;
+                font-weight: 500;
             }
             .buy-grid {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 60px;
-                align-items: start;
-            }
-            .buy-card {
-                background: var(--surface);
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1px;
+                background: var(--border);
                 border: 1px solid var(--border);
-                padding: 40px;
+                margin-bottom: 80px;
             }
-            .buy-card h3 {
-                font-size: 1.4rem;
-                text-transform: uppercase;
-                letter-spacing: -0.5px;
-                margin-bottom: 18px;
-                font-weight: 800;
-            }
-            .buy-list,
-            .steps {
-                list-style: none;
-                display: grid;
-                gap: 16px;
-            }
-            .buy-list li {
+            .buy-card-enhanced {
+                background: var(--surface);
+                padding: 40px 30px;
+                text-align: center;
+                transition: all 0.3s ease;
                 display: flex;
+                flex-direction: column;
                 align-items: center;
-                gap: 12px;
-                font-size: 0.95rem;
-                font-weight: 600;
-                color: var(--text);
             }
-            .step {
-                display: flex;
-                gap: 14px;
-                align-items: flex-start;
+            .buy-card-enhanced:hover {
+                background: var(--surface-strong);
+                transform: translateY(-4px);
             }
-            .step-number {
-                min-width: 36px;
-                height: 36px;
-                border-radius: 999px;
+            .card-icon {
+                width: 60px;
+                height: 60px;
                 background: var(--primary);
-                color: white;
-                display: inline-flex;
+                border-radius: 50%;
+                display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 0.75rem;
-                font-weight: 800;
-                letter-spacing: 1px;
+                margin-bottom: 24px;
+                transition: all 0.3s ease;
             }
-            .step h4 {
-                font-size: 0.95rem;
+            .buy-card-enhanced:hover .card-icon {
+                transform: scale(1.1);
+            }
+            .card-icon .icon {
+                font-size: 1.8rem;
+                color: white;
+                stroke-width: 1.5;
+            }
+            .buy-card-enhanced h3 {
+                font-size: 1rem;
                 text-transform: uppercase;
-                letter-spacing: 1px;
-                margin-bottom: 6px;
+                letter-spacing: 0.5px;
+                margin-bottom: 12px;
                 font-weight: 800;
+                color: var(--text);
             }
-            .step p {
+            .buy-card-enhanced p {
                 color: var(--text-light);
                 font-size: 0.9rem;
+                line-height: 1.6;
+                max-width: 250px;
+            }
+            .process-section {
+                text-align: center;
+            }
+            .process-section h2 {
+                font-size: 2rem;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                margin-bottom: 50px;
+                font-weight: 900;
+            }
+            .process-timeline {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 0;
+                max-width: 1100px;
+                margin: 0 auto;
+            }
+            .timeline-step {
+                flex: 1;
+                text-align: center;
+            }
+            .step-circle {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background: var(--primary);
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                font-weight: 900;
+                margin: 0 auto 24px;
+                border: 4px solid var(--bg);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+            .step-content h4 {
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 12px;
+                font-weight: 800;
+            }
+            .step-content p {
+                color: var(--text-light);
+                font-size: 0.95rem;
+                line-height: 1.6;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .timeline-connector {
+                width: 100px;
+                height: 2px;
+                background: var(--border);
+                margin-top: 35px;
+                position: relative;
+            }
+            .timeline-connector::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 0;
+                height: 0;
+                border-top: 6px solid transparent;
+                border-bottom: 6px solid transparent;
+                border-left: 8px solid var(--border);
             }
             .cta-final {
                 padding: 90px 0;
@@ -768,10 +848,23 @@
                 }
                 .buy-grid {
                     grid-template-columns: 1fr;
-                    gap: 32px;
+                    gap: 1px;
                 }
-                .buy-card {
-                    padding: 28px;
+                .buy-card-enhanced {
+                    padding: 40px 24px;
+                }
+                .process-timeline {
+                    flex-direction: column;
+                    gap: 40px;
+                }
+                .timeline-connector {
+                    display: none;
+                }
+                .section-intro h2 {
+                    font-size: 1.8rem;
+                }
+                .process-section h2 {
+                    font-size: 1.6rem;
                 }
                 .cta-final {
                     padding: 70px 0;
@@ -1383,108 +1476,104 @@
             </section>
         </div>
 
-        <section class="values-section" id="valores">
-            <div class="grid-3">
-                <div class="value-card">
-                    <svg class="icon icon-box value-icon" aria-hidden="true">
-                        <use href="#icon-box"></use>
-                    </svg>
-                    <h3>Full Set Garantizado</h3>
-                    <p>
-                        Caja original, manuales y tarjetas de garantía. La
-                        experiencia de estreno completa.
-                    </p>
+        <section class="buy-today" id="valores">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Compra con confianza</h2>
+                    <p>Tu inversión protegida en cada paso</p>
                 </div>
-                <div class="value-card">
-                    <svg
-                        class="icon icon-certificate value-icon"
-                        aria-hidden="true"
-                    >
-                        <use href="#icon-certificate"></use>
-                    </svg>
-                    <h3>Autenticidad Verificada</h3>
-                    <p>
-                        Doble verificación. Solo vendemos piezas 100%
-                        originales, nuevas y en estado cosmético impecable.
-                    </p>
-                </div>
-                <div class="value-card">
-                    <svg class="icon icon-shield value-icon" aria-hidden="true">
-                        <use href="#icon-shield"></use>
-                    </svg>
-                    <h3>Envío Asegurado</h3>
-                    <p>
-                        Tu inversión viaja protegida. Envíos asegurados por el
-                        valor total a toda Colombia.
-                    </p>
-                </div>
-            </div>
-        </section>
 
-        <section class="buy-today">
-            <div class="container buy-grid">
-                <div class="buy-card">
-                    <h3>Por qué comprar hoy</h3>
-                    <ul class="buy-list">
-                        <li>
+                <div class="buy-grid">
+                    <div class="buy-card-enhanced">
+                        <div class="card-icon">
                             <svg
                                 class="icon icon-certificate"
                                 aria-hidden="true"
                             >
                                 <use href="#icon-certificate"></use>
                             </svg>
-                            Autenticidad verificada
-                        </li>
-                        <li>
+                        </div>
+                        <h3>Autenticidad verificada</h3>
+                        <p>
+                            Cada pieza es 100% original con certificado de
+                            autenticidad
+                        </p>
+                    </div>
+
+                    <div class="buy-card-enhanced">
+                        <div class="card-icon">
                             <svg class="icon icon-box" aria-hidden="true">
                                 <use href="#icon-box"></use>
                             </svg>
-                            Full set completo
-                        </li>
-                        <li>
+                        </div>
+                        <h3>Full set completo</h3>
+                        <p>
+                            Caja, papeles, garantía y todos los accesorios
+                            originales
+                        </p>
+                    </div>
+
+                    <div class="buy-card-enhanced">
+                        <div class="card-icon">
                             <svg class="icon icon-shield" aria-hidden="true">
                                 <use href="#icon-shield"></use>
                             </svg>
-                            Envío asegurado
-                        </li>
-                        <li>
+                        </div>
+                        <h3>Envío asegurado</h3>
+                        <p>
+                            Protección total durante el transporte a cualquier
+                            ciudad
+                        </p>
+                    </div>
+
+                    <div class="buy-card-enhanced">
+                        <div class="card-icon">
                             <svg
                                 class="icon icon-circle-check"
                                 aria-hidden="true"
                             >
                                 <use href="#icon-circle-check"></use>
                             </svg>
-                            Garantía oficial incluida
-                        </li>
-                    </ul>
+                        </div>
+                        <h3>Garantía oficial</h3>
+                        <p>Respaldo del fabricante incluido en cada compra</p>
+                    </div>
                 </div>
-                <div class="buy-card">
-                    <h3>Proceso en 3 pasos</h3>
-                    <div class="steps">
-                        <div class="step">
-                            <span class="step-number">01</span>
-                            <div>
-                                <h4>Elige</h4>
+
+                <div class="process-section">
+                    <h2>Proceso simple en 3 pasos</h2>
+                    <div class="process-timeline">
+                        <div class="timeline-step">
+                            <div class="step-circle">01</div>
+                            <div class="step-content">
+                                <h4>Elige tu reloj</h4>
                                 <p>
-                                    Te compartimos opciones reales y
-                                    disponibles.
+                                    Explora nuestro catálogo y encuentra tu
+                                    pieza ideal. Todo el inventario está
+                                    disponible para entrega inmediata.
                                 </p>
                             </div>
                         </div>
-                        <div class="step">
-                            <span class="step-number">02</span>
-                            <div>
-                                <h4>Valida</h4>
-                                <p>Confirmamos autenticidad y full set.</p>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-step">
+                            <div class="step-circle">02</div>
+                            <div class="step-content">
+                                <h4>Validamos por ti</h4>
+                                <p>
+                                    Verificamos la autenticidad, revisamos el
+                                    full set y aseguramos que todo esté perfecto
+                                    antes del envío.
+                                </p>
                             </div>
                         </div>
-                        <div class="step">
-                            <span class="step-number">03</span>
-                            <div>
-                                <h4>Recibe</h4>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-step">
+                            <div class="step-circle">03</div>
+                            <div class="step-content">
+                                <h4>Recibe seguro</h4>
                                 <p>
-                                    Entrega asegurada y seguimiento en tiempo
-                                    real.
+                                    Envío asegurado con seguimiento en tiempo
+                                    real. Tu reloj llega protegido a tu puerta.
                                 </p>
                             </div>
                         </div>
