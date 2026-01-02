@@ -537,6 +537,39 @@
                 max-width: 350px;
                 margin: 0 auto;
             }
+            .find-watch-section {
+                padding: var(--spacing-xl) 0;
+                background: var(--primary);
+                color: white;
+                text-align: center;
+            }
+            .find-watch-content {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            .find-watch-section h2 {
+                font-size: 2.2rem;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                margin-bottom: 16px;
+                font-weight: 900;
+                color: white;
+            }
+            .find-watch-section p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                margin-bottom: var(--spacing-md);
+                color: rgba(255, 255, 255, 0.9);
+            }
+            .find-watch-section .btn {
+                background: white;
+                color: var(--primary);
+                border-color: white;
+            }
+            .find-watch-section .btn:hover {
+                background: var(--surface-strong);
+                color: var(--primary);
+            }
             .buy-today {
                 padding: var(--spacing-2xl) 0;
                 background: var(--bg);
@@ -934,6 +967,68 @@
             .modal-backdrop.active {
                 opacity: 1;
                 pointer-events: all;
+            }
+            .content-modal-backdrop {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7);
+                backdrop-filter: blur(8px);
+                z-index: 3000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s;
+                padding: var(--spacing-sm);
+            }
+            .content-modal-backdrop.active {
+                opacity: 1;
+                pointer-events: all;
+            }
+            .content-modal {
+                background: var(--surface-strong);
+                width: 100%;
+                max-width: 800px;
+                max-height: 90vh;
+                overflow-y: auto;
+                padding: var(--spacing-lg);
+                border: 1px solid var(--border);
+                position: relative;
+            }
+            .content-modal h2 {
+                font-size: 2rem;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                margin-bottom: var(--spacing-md);
+                font-weight: 900;
+            }
+            .content-modal-body {
+                color: var(--text);
+                line-height: 1.8;
+            }
+            .content-modal-body h3 {
+                font-size: 1.2rem;
+                font-weight: 800;
+                margin-top: var(--spacing-md);
+                margin-bottom: var(--spacing-sm);
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            .content-modal-body p {
+                margin-bottom: var(--spacing-sm);
+                color: var(--text-light);
+            }
+            .content-modal-body ul {
+                margin-bottom: var(--spacing-sm);
+                padding-left: 20px;
+            }
+            .content-modal-body li {
+                margin-bottom: 8px;
+                color: var(--text-light);
             }
             .modal-content {
                 background: var(--surface-strong);
@@ -1523,6 +1618,30 @@
             </section>
         </div>
 
+        <section class="find-watch-section">
+            <div class="container find-watch-content">
+                <h2>¿No encuentras lo que buscas?</h2>
+                <p>
+                    Tenemos acceso a una red exclusiva de distribuidores. Si hay
+                    un reloj específico que deseas, lo buscamos y conseguimos
+                    para ti. Mismo servicio, misma garantía.
+                </p>
+                <a
+                    href="#"
+                    class="btn btn-primary"
+                    data-wa="Hola, estoy buscando un reloj específico y me gustaría que me ayudaran a conseguirlo."
+                >
+                    <svg
+                        class="icon icon-whatsapp icon-fill"
+                        aria-hidden="true"
+                    >
+                        <use href="#icon-whatsapp"></use>
+                    </svg>
+                    Cuéntanos qué buscas
+                </a>
+            </div>
+        </section>
+
         <section class="buy-today" id="valores">
             <div class="container">
                 <div class="section-intro">
@@ -1542,8 +1661,8 @@
                         </div>
                         <h3>Autenticidad verificada</h3>
                         <p>
-                            Cada pieza es 100% original con certificado de
-                            autenticidad
+                            Cada pieza es 100% original con certificado con
+                            tarjeta de la marca
                         </p>
                     </div>
 
@@ -1582,7 +1701,7 @@
                                 <use href="#icon-circle-check"></use>
                             </svg>
                         </div>
-                        <h3>Garantía oficial</h3>
+                        <h3>Garantía</h3>
                         <p>Respaldo del fabricante incluido en cada compra</p>
                     </div>
                 </div>
@@ -1687,8 +1806,7 @@
                         <details>
                             <summary>¿Tienen garantía?</summary>
                             <p>
-                                Sí. Cuentas con la garantía oficial del
-                                fabricante (1 a 2 años según la marca) y el
+                                Sí. Cuentas con la garantía del fabricante y el
                                 respaldo directo de Monet Label durante el
                                 proceso.
                             </p>
@@ -1754,8 +1872,18 @@
                     <div class="footer-col">
                         <h4>Legal</h4>
                         <ul>
-                            <li><a href="#">Términos y Condiciones</a></li>
-                            <li><a href="#">Política de Envío</a></li>
+                            <li>
+                                <a
+                                    href="#"
+                                    onclick="openContentModal('terminos'); return false;"
+                                    >Términos y Condiciones</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    onclick="openContentModal('envios'); return false;"
+                                    >Política de Envío</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -1857,6 +1985,17 @@
             </div>
         </div>
 
+        <!-- Content Modal -->
+        <div class="content-modal-backdrop" id="contentModal">
+            <div class="content-modal">
+                <button class="modal-close" onclick="closeContentModal()"
+                    >&times;</button
+                >
+                <h2 id="contentModalTitle"></h2>
+                <div class="content-modal-body" id="contentModalBody"></div>
+            </div>
+        </div>
+
         <script>
             (function () {
                 // --- LOGICA FAQ ---
@@ -1955,6 +2094,54 @@
                         el.href = `https://wa.me/${NUMBER}?text=${text}`;
                     }
                 });
+
+                // Content Modal System
+                let legalContent = {};
+
+                fetch("/content/legal.json")
+                    .then((res) => res.json())
+                    .then((data) => {
+                        legalContent = data;
+                    })
+                    .catch((err) =>
+                        console.error("Error loading legal content:", err),
+                    );
+
+                window.openContentModal = function (type) {
+                    const content = legalContent[type];
+                    if (!content) return;
+
+                    const modal = document.getElementById("contentModal");
+                    document.getElementById("contentModalTitle").textContent =
+                        content.titulo;
+                    document.getElementById("contentModalBody").innerHTML =
+                        content.contenido;
+
+                    modal.classList.add("active");
+                    document.body.style.overflow = "hidden";
+                };
+
+                window.closeContentModal = function () {
+                    const modal = document.getElementById("contentModal");
+                    modal.classList.remove("active");
+                    document.body.style.overflow = "auto";
+                };
+
+                const contentModal = document.getElementById("contentModal");
+                if (contentModal) {
+                    contentModal.addEventListener("click", (e) => {
+                        if (e.target === contentModal) closeContentModal();
+                    });
+
+                    document.addEventListener("keydown", (e) => {
+                        if (
+                            e.key === "Escape" &&
+                            contentModal.classList.contains("active")
+                        ) {
+                            closeContentModal();
+                        }
+                    });
+                }
             })();
         </script>
     </body>
